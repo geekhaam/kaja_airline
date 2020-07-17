@@ -1,0 +1,396 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-kR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+<!-- 탑승 인원 - 증가, 감소 로직  -->
+<script type="text/javascript">
+	
+	function modifyProductQuantity(id, quantity){
+	    
+	    if(isNaN($("#"+id).val())){
+	         alert( '숫자만 입력가능 합니다.' );
+	         $("#"+id).focus();
+	         $("#"+id).val(0);
+	         return;
+	    }
+	    var q = parseInt($("#"+id).val())+parseInt(quantity);
+	    if(q < 0) {
+	    	alert('더 이상 줄일 수 없습니다.');
+	    	q = 0;
+	    }
+	    $("#"+id).val(q);
+	    
+	};
+
+</script>
+
+<!-- 주요공항 리스트 레이어 display 변경 로직  -->
+<script type="text/javascript">
+
+	function openAirportList(param) {
+		if(param.style.display == "none") {
+			param.style.display = "block"
+		} else {
+			param.style.display = "none"
+		}
+	};
+	
+</script>
+
+<!-- 공항 선택시 input태그 공항 변경 -->
+<script type="text/javascript">
+	function setDepAirport(param) {
+		var select = $(param).text();
+		$("#depAirport").val(select);
+		$("#dep_airport_list").css("display", "none");
+	}
+	
+	function setArrAirport(param) {
+		var select = $(param).text();
+		$("#arrAirport").val(select);
+		$("#arr_airport_list").css("display", "none");
+	}
+</script>
+
+<!-- 편도, 왕복 Ajax 로직 -->
+<script type="text/javascript">
+	
+	$(function() {
+		$("#onewayTrip").click(function() {
+			$.ajax({
+				url : 'oneway_trip.jsp',
+				dataType : 'html',
+				type : 'get',
+				success : function(result) {
+					var refine = $(".depArr_date").html(result).find('table')
+					$(".depArr_date").html(refine)
+				}
+			});
+			$("#tripType").val("편도");
+			$("#onewayTrip").css("background-color", "crimson")
+			$("#onewayTrip").css("color", "white")
+			$("#roundTrip").css("background-color", "white")
+			$("#roundTrip").css("color", "black")
+		});
+			
+		$("#roundTrip").click(function() {
+			$.ajax({
+				url : 'round_trip.jsp',
+				dataType : 'html',
+				type : 'get',
+				success : function(result) {
+					var refine = $(".depArr_date").html(result).find('table')
+					$(".depArr_date").html(refine)
+				}
+			});
+			$("#tripType").val("왕복");
+			$("#roundTrip").css("background-color", "crimson")
+			$("#roundTrip").css("color", "white")
+			$("#onewayTrip").css("background-color", "white")
+			$("#onewayTrip").css("color", "black")
+		});
+		showSlides();
+	});
+</script>
+
+<!-- 공항 검색 자동완성 Ajax 로직 -->
+<script type="text/javascript">
+
+    $(document).ready(function() {
+    	$("#depAirport").autocomplete({
+    	source : function(request, response) {
+    		$.ajax({
+    			url : 'autocomplete_json.jsp',
+    			dataType : 'json',
+    			type : 'get',
+    			success : function(result) { //성공시
+    				response(
+    					$.map(result, function(item) {
+    						if (item.location.indexOf($("#depAirport").val()) >= 0) {
+    							return {
+        							label: item.location + " " +item.code,
+        							value: item.location + " " + item.code
+        						}
+    						}
+    					})
+    				); //response-end
+    			},
+    			error : function(e) {
+    				alert("통신에 실패했습니다.");
+    				console.dir(e);
+    			}
+    		});
+    	}, //source-end
+    	minLength : 1,
+    	autoFocus : false,
+    	select : function(evt, ui) {
+    		
+    	},
+    	focus : function(evt, ui) {
+    		return false;
+    	},
+    	close : function(evt) {
+    		
+    	}
+    	});
+    	
+    	$("#arrAirport").autocomplete({
+        	source : function(request, response) {
+        		$.ajax({
+        			url : 'autocomplete_json.jsp',
+        			dataType : 'json',
+        			type : 'get',
+        			success : function(result) { //성공시
+        				console.log(result);
+        				response(
+        					$.map(result, function(item) {
+        						if (item.location.indexOf($("#arrAirport").val()) >= 0) {
+        							return {
+            							label: item.location + " " +item.code,
+            							value: item.location + " " + item.code
+            						}
+        						}
+        					})
+        				); //response-end
+        			},
+        			error : function(e) {
+        				alert("통신에 실패했습니다.");
+        				console.dir(e);
+        			}
+        		});
+        	}, //source-end
+        	minLength : 1,
+        	autoFocus : false,
+        	select : function(evt, ui) {
+        		
+        	},
+        	focus : function(evt, ui) {
+        		return false;
+        	},
+        	close : function(evt) {
+        		
+        	}
+        	});
+    });
+</script>
+
+<style type="text/css">
+/* Noto Sans KR 폰트 추가 */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+input {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: initial;
+}
+
+div.container {
+	width: 40%;
+	height: 50%;
+	margin: 0 auto;
+}
+
+div.container_submit {
+	text-align: right;
+}
+
+html, body {
+	padding: 0px;
+	border: 0px;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	padding: 0px;
+	top: 0;
+	position: fixed;
+	background-color: white;
+	height: auto;
+	z-index: 90;
+}
+
+section {
+	margin: 2%;
+	margin-top: 13%;
+}
+
+footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+</style>
+
+<title>여정 선택</title>
+</head>
+<body>
+
+	<header><jsp:include page="./header.jsp" /></header>
+
+	<section id="sectionId">
+		<div class="container">
+			<form action="reservation_result.rsv" method="post">
+				<div class="trip_type">
+					<h2>여정/날짜 선택</h2>
+					<table class="selectTripType" border="0">
+						<tr>
+							<td><input type="button" id="onewayTrip" value="편도"
+								style="width: 80px; height: 30px; background-color: crimson; color: white; font-weight: bold;"></td>
+							<td><input type="button" id="roundTrip" value="왕복"
+								style="width: 80px; height: 30px; background-color: white; color: black; font-weight: bold;"></td>
+							<td><input type="hidden" id="tripType" name="tripType"
+								value="편도"></td>
+						</tr>
+					</table>
+				</div>
+				<!-- tab_trip_type end -->
+				<div class="depArr_date">
+					<table class="tab_selectDepArr"
+						style="border: 0px; border-spacing: 10px;">
+						<tr>
+							<td>
+								<div class="dep">
+									<label for="depAirport">출발지</label> <br> <input
+										type="text" id="depAirport" name="depAirport"
+										onFocus="this.value=''; return true;" required="required"
+										style="width: 200px; height: 50px;" />
+									<div class="btn_airport_list1" style="position: relative;">
+										<button name="btn_airport_list1" type="button"
+											onclick="javascript: openAirportList(document.getElementById('dep_airport_list'));">주요도시
+											바로선택</button>
+									</div>
+									<div class="dep_airport_list" id="dep_airport_list"
+										style="position: absolute; display: none; border: 1px solid black; background-color: white; padding: 10px">
+										<strong class="airport_list_title">주요도시 바로선택</strong>
+										<h5>국내선</h5>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li><a href="#none"
+												onclick="javascript: setDepAirport(this);">서울/인천 ICN</a></li>
+											<li><a href="#none"
+												onclick="javascript: setDepAirport(this);">서울/김포 GMP</a></li>
+										</ul>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="arr">
+									<label for="arrAirport">도착지</label> <br> <input
+										type="text" id="arrAirport" name="arrAirport"
+										onFocus="this.value=''; return true;" required="required"
+										style="width: 200px; height: 50px;" />
+									<div class="btn_airport_list2" style="position: relative;">
+										<button name="btn_airport_list2" type="button"
+											onclick="javascript: openAirportList(document.getElementById('arr_airport_list'));">주요도시
+											바로선택</button>
+									</div>
+									<div class="arr_airport_list" id="arr_airport_list"
+										style="position: absolute; display: none; border: 1px solid black; background-color: white; padding: 10px">
+										<strong class="airport_list_title">주요도시 바로선택</strong>
+										<h5>국내선</h5>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li><a href="#none"
+												onclick="javascript: setArrAirport(this);">서울/김포 GMP</a></li>
+										</ul>
+									</div>
+								</div>
+							</td>
+							<td valign="top">
+								<div class="date">
+									<label for="boardingDate">탑승일</label> <br> <input
+										type="date" id="boardingDate" name="bDate" required="required"
+										style="width: 200px; height: 50px;">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- tab_depArr_date end -->
+				<div class="passenger">
+					<h2>탑승 인원 선택</h2>
+					<table class="selectPassenger"
+						style="border: 0px; border-spacing: 20px;">
+						<tr>
+							<td>
+								<div class="pass_adult" id="adult" style="display: block">
+									<h5>
+										성인&nbsp;<span id="adultAge">(만 12세 이상)</span>
+									</h5>
+									<div class="btn_number_box">
+										<input type="button" name="btn_number_minus"
+											onclick="javascript:modifyProductQuantity('adultCnt', -1);"
+											value="-" style="width: 30px; height: 30px;"> <input
+											type="text" id="adultCnt" name="adultCount" title="성인 탑승 인원"
+											value="1"
+											style="text-align: center; width: 120px; height: 25px;">
+										<input type="button" name="btn_number_plus"
+											onclick="javascript:modifyProductQuantity('adultCnt', 1);"
+											value="+" style="width: 30px; height: 30px;">
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="pass_child" id="child" style="display: block">
+									<h5>
+										소아&nbsp;<span id="childAge">(만 2세 ~ 12세 미만)</span>
+									</h5>
+									<div class="btn_number_box">
+										<input type="button" name="btn_number_minus"
+											onclick="javascript:modifyProductQuantity('childCnt', -1);"
+											value="-" style="width: 30px; height: 30px;"> <input
+											type="text" id="childCnt" name="childCount" title="소아 탑승 인원"
+											value="0"
+											style="text-align: center; width: 120px; height: 25px;">
+										<input type="button" name="btn_number_plus"
+											onclick="javascript:modifyProductQuantity('childCnt', 1);"
+											value="+" style="width: 30px; height: 30px;">
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="pass_baby" id="baby">
+									<h5>
+										유아&nbsp;<span id="babyAge">(만 2세 미만)</span>
+									</h5>
+									<div class="btn_number_box">
+										<input type="button" name="btn_number_minus"
+											onclick="javascript:modifyProductQuantity('babyCnt', -1);"
+											value="-" style="width: 30px; height: 30px;"> <input
+											type="text" id="babyCnt" name="babyCount" title="유아 탑승 인원"
+											value="0"
+											style="text-align: center; width: 120px; height: 25px;">
+										<input type="button" name="btn_number_plus"
+											onclick="javascript:modifyProductQuantity('babyCnt', 1);"
+											value="+" style="width: 30px; height: 30px;">
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- tab_passenger end -->
+				<div class="container_submit">
+					<input type="submit" value="항공권 조회"
+						style="width: 100px; height: 40px;">
+				</div>
+			</form>
+		</div>
+		<!-- container end -->
+	</section>
+
+	<footer><jsp:include page="./footer.jsp" /></footer>
+
+</body>
+</html>

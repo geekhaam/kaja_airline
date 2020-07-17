@@ -1,0 +1,82 @@
+
+7월 17, 2020 15:52:27.79 NEW SESSION
+7월 17, 2020 15:52:27.79 [29200:27900:0717/155227.794:ERROR:device_event_log_impl.cc(208)] [15:52:27.795] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 15:54:58.40 [18888:31564:0717/155458.407:ERROR:device_event_log_impl.cc(208)] [15:54:58.408] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:00:08.19 [27412:18824:0717/160008.191:ERROR:device_event_log_impl.cc(208)] [16:00:08.191] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:03:15.78 [3360:33900:0717/160315.784:ERROR:device_event_log_impl.cc(208)] [16:03:15.785] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:04:27.71 [27964:28152:0717/160427.711:ERROR:device_event_log_impl.cc(208)] [16:04:27.710] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:05:38.37 [27964:28152:0717/160538.378:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:06:32.33 [25776:17456:0717/160632.333:ERROR:device_event_log_impl.cc(208)] [16:06:32.333] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:08:51.83 [12364:8952:0717/160851.833:ERROR:device_event_log_impl.cc(208)] [16:08:51.833] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:10:26.19 [34184:23084:0717/161026.197:ERROR:device_event_log_impl.cc(208)] [16:10:26.197] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:11:26.18 [34184:23084:0717/161126.186:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:11:35.26 [34184:23084:0717/161135.269:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:11:37.45 [34184:23084:0717/161137.458:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:11:38.60 [34184:23084:0717/161138.602:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:12:29.93 [33684:18640:0717/161229.939:ERROR:device_event_log_impl.cc(208)] [16:12:29.939] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:13:36.13 [23536:24324:0717/161336.130:ERROR:device_event_log_impl.cc(208)] [16:13:36.130] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:14:25.70 [33228:24516:0717/161425.706:ERROR:device_event_log_impl.cc(208)] [16:14:25.706] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:14:58.56 [33228:24516:0717/161458.562:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:14:59.59 [33228:24516:0717/161459.595:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:15:09.84 [33228:24516:0717/161509.849:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:15:10.52 [33228:24516:0717/161510.526:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:16:12.31 [33228:24516:0717/161612.314:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:18:33.33 [33228:24516:0717/161833.330:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:18:34.03 [33228:24516:0717/161834.030:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:18:34.54 [33228:24516:0717/161834.541:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:18:56.70 [33228:24516:0717/161856.702:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:18:57.48 [33228:24516:0717/161857.481:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:19:27.08 [22780:32176:0717/161927.089:ERROR:device_event_log_impl.cc(208)] [16:19:27.089] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:21:51.21 [22780:32176:0717/162151.218:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:21:51.95 [22780:32176:0717/162151.958:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:23:44.56 [30508:12276:0717/162344.569:ERROR:device_event_log_impl.cc(208)] [16:23:44.569] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:24:47.15 [3936:30544:0717/162447.151:ERROR:device_event_log_impl.cc(208)] [16:24:47.151] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:26:38.62 [18652:31440:0717/162638.620:ERROR:device_event_log_impl.cc(208)] [16:26:38.620] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 16:26:45.60 [18652:31440:0717/162645.608:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:32:09.12 [18652:31440:0717/163209.120:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:32:10.18 [18652:31440:0717/163210.180:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:32:11.78 [18652:31440:0717/163211.786:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:36:49.49 [18652:31440:0717/163649.495:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 16:37:24.24 [24588:12656:0717/163724.244:ERROR:device_event_log_impl.cc(208)] [16:37:24.244] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 17, 2020 17:17:00.67 NEW SESSION
+7월 17, 2020 17:17:00.67 [31672:33584:0717/171700.678:ERROR:device_event_log_impl.cc(208)] [17:17:00.678] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 17:25:46.90 [15204:34964:0717/172546.902:ERROR:device_event_log_impl.cc(208)] [17:25:46.901] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 17, 2020 17:31:42.96 NEW SESSION
+7월 17, 2020 17:31:42.96 [28228:34668:0717/173142.960:ERROR:device_event_log_impl.cc(208)] [17:31:42.960] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 17:35:29.25 [10968:29124:0717/173529.252:ERROR:device_event_log_impl.cc(208)] [17:35:29.252] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 17:41:42.56 [17572:35584:0717/174142.568:ERROR:device_event_log_impl.cc(208)] [17:41:42.568] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 17:43:44.81 [17572:35584:0717/174344.816:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 17:50:23.80 [26212:23784:0717/175023.806:ERROR:device_event_log_impl.cc(208)] [17:50:23.806] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 17:50:35.86 [27664:23952:0717/175035.866:ERROR:device_event_log_impl.cc(208)] [17:50:35.865] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 17, 2020 17:52:56.19 NEW SESSION
+7월 17, 2020 17:52:56.19 [7304:28084:0717/175256.193:ERROR:device_event_log_impl.cc(208)] [17:52:56.192] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:16:32.80 [11412:34704:0717/181632.803:ERROR:device_event_log_impl.cc(208)] [18:16:32.804] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:19:22.11 [31292:8908:0717/181922.116:ERROR:device_event_log_impl.cc(208)] [18:19:22.116] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:20:13.79 [26912:14488:0717/182013.793:ERROR:device_event_log_impl.cc(208)] [18:20:13.793] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:30:10.15 [20584:30384:0717/183010.156:ERROR:device_event_log_impl.cc(208)] [18:30:10.156] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 17, 2020 18:33:59.41 NEW SESSION
+7월 17, 2020 18:33:59.41 [8704:14292:0717/183359.402:ERROR:device_event_log_impl.cc(208)] [18:33:59.402] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:54:23.55 [14772:9540:0717/185423.554:ERROR:device_event_log_impl.cc(208)] [18:54:23.555] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 18:57:09.77 [14772:9540:0717/185709.770:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:07:03.94 [3328:18216:0717/190703.945:ERROR:device_event_log_impl.cc(208)] [19:07:03.946] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:07:22.58 [16892:18208:0717/190722.579:ERROR:device_event_log_impl.cc(208)] [19:07:22.579] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:09:53.46 [13972:11948:0717/190953.467:ERROR:device_event_log_impl.cc(208)] [19:09:53.466] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:13:45.94 [10452:5036:0717/191345.945:ERROR:device_event_log_impl.cc(208)] [19:13:45.944] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:19:17.16 [10452:5036:0717/191917.168:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:19:18.45 [10452:5036:0717/191918.455:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:19:20.45 [10452:5036:0717/191920.457:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:21:27.87 [9652:18112:0717/192127.878:ERROR:device_event_log_impl.cc(208)] [19:21:27.879] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:24:50.17 [9652:18112:0717/192450.171:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:25:28.49 [9652:18112:0717/192528.484:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:25:30.68 [9652:18112:0717/192530.683:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:32:20.89 [3916:18420:0717/193220.895:ERROR:device_event_log_impl.cc(208)] [19:32:20.894] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:39:31.14 [8484:13972:0717/193931.145:ERROR:device_event_log_impl.cc(208)] [19:39:31.146] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:46:25.31 [18232:15464:0717/194625.310:ERROR:device_event_log_impl.cc(208)] [19:46:25.310] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 17, 2020 19:53:18.88 [18232:15464:0717/195318.888:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:53:23.75 [18232:15464:0717/195323.750:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:53:27.54 [18232:15464:0717/195327.546:ERROR:CONSOLE(1475)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1475)
+7월 17, 2020 19:55:32.53 [8916:4788:0717/195532.537:ERROR:device_event_log_impl.cc(208)] [19:55:32.537] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.

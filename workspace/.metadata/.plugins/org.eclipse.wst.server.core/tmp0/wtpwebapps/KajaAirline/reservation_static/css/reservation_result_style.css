@@ -1,0 +1,303 @@
+@charset "EUC-KR";
+
+	@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+	body {
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	
+	input {
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: initial;
+	}
+	.wrapper {
+		width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.wrapper::before{
+		display: inline-block;
+		content: "";
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	.wrapper .inner {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	div.result_container {
+		position: relative;
+		width: 1090px;
+		margin: 20px auto 0;
+		display: block;
+	}
+	
+	div.estimate_container {
+		padding-top: 20px;
+		position: relative;
+		width: 1090px;
+		margin: 20px auto 0;
+		display: block;
+	}
+	
+	div.reserve_container {
+		border: 1px solid black;
+		width: 300px;
+		min-height: 400px;
+	    float: left;
+	    padding: 20px;
+	    display: block;
+	}
+	
+	div.schedule {
+		width: 692px;
+		min-height: 400px;
+		float: right;
+		display: block;
+		position: relative;
+	}
+	
+	div.dep_airport_list {
+		position: absolute;
+		display: none;
+		width: 600px;
+		height: 500px;
+		border: 3px solid black;
+		background-color: white;
+		padding: 10px;
+		z-index: 16500000;
+	}
+	
+	div.arr_airport_list {
+		position: absolute;
+		display: none;
+		width: 600px;
+		height: 500px;
+		border: 3px solid black;
+		background-color: white;
+		padding: 10px;
+		z-index: 16500000;
+	}
+	
+	div.passenger {
+		position: absolute;
+		display: none;
+		border: 1px solid black;
+		background-color: white;
+		padding: 10px;
+		z-index: 16500000;
+	}
+	
+	html, body {
+		padding: 0px;
+		border: 0px;
+		margin: 0;
+	}
+	
+	header {
+		width : 100%;
+		padding: 0px;
+		top : 0;
+		position: fixed;
+		background-color: white;
+		height: auto;
+		z-index: 90;
+	}
+	
+	
+	section{
+		margin: 2%;
+	    margin-top: 13%;
+	}
+	
+	footer {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		color: white;
+		text-align: center;
+	}
+	
+	.tab_schedule {
+    	width: 100%;
+    	border: 1px solid #444444;
+    	border-collapse: collapse;
+    	text-align: center;
+	}
+	.tab_schedule tr {
+    	border: 2px solid #444444;
+    	padding: 10px;
+	}
+	
+	.tab_schedule th {
+    	border: 1px solid #444444;
+	}
+	
+	.tab_schedule td {
+    	border: 1px solid #444444;
+    	padding: 10px;
+	}
+	
+	.tr_schedule {
+		font-weight: 600;
+	}
+
+    .wrap-loading { /*로딩 이미지*/
+        top: 50%;
+        left: 40%;
+        margin-left: -21px;
+        margin-top: -21px;
+        text-align: center;
+    	position: absolute;
+    }
+
+    .display-none{ /*감추기*/
+        display: none;
+    }
+    
+    div.select_seat {
+    	text-align: initial;
+		position: absolute;
+		display: none;
+        left: -616px;
+    	top: 49px;
+	    width: 600px;
+	    height: 300px;
+		border: 3px solid black;
+		background-color: white;
+		padding: 10px;
+		z-index: 16500000;
+	}
+	
+	.tab_seat {
+		display: inline-block;
+		float: left;
+		border-spacing: 10px;
+	    border-collapse: collapse;
+	    margin-left: 37px;
+    	margin-top: -20px;
+	    min-width: 150px;
+	}
+	.tab_seat th {
+		border: 0px;
+	}
+	
+	.tab_seat tr {
+		border: 0px;
+		vertical-align: middle;
+	}
+	
+	.tab_seat td {
+		border: 0px;
+    	padding: 5px;
+    	text-align: center;
+	}
+	
+	.tab_seat tbody td:first-of-type {
+		border-right: 1px solid gray;
+	}
+	
+	.tab_seat tbody td:nth-child(3) {
+		border-right: 1px solid gray;
+	}
+	
+	.tab_seat tbody td:nth-child(5) {
+		border-right: 1px solid gray;
+	}
+	
+	.tab_seat tbody td:last-of-type {
+		border-right: 1px solid gray;
+	}
+	
+	.btn_seat {
+		width: 30px;
+	    height: 30px;
+	    background-color: white;
+	    border: 1px solid black;
+	    border-radius: 5px 5px;
+	    overflow: hidden;
+	    box-shadow: 0 0 3px;
+	}
+	
+	.seat_info {
+	    display: inline-block;
+	    text-align: left;
+	    float: right;
+	    min-height: 230px;
+	    min-width: 250px;
+	    margin-right: 10px;
+	}
+	
+	.seat_passCnt {
+		width: 40px;
+    	text-align: center;
+    	font-weight: 800;
+	}
+	
+	.tab_seat_info tr {
+		border: 0px;
+	}
+	
+	.tab_seat_info td {
+		border: 0px;
+	}
+	
+	.complete_select {
+	    width: 100px;
+	    height: 43px;
+	    font-weight: 500;
+	    font-size: 17px;
+	    color: black;
+	}
+	
+	.close_select {
+		width: 100px;
+	    height: 43px;
+	    font-weight: 500;
+	    font-size: 17px;
+	    color: black;
+	}
+	
+	.flight_title {
+		position: relative;
+	    background: crimson;
+	    color: white;
+	    margin-bottom: 30px;
+        margin-top: 0px;
+	}
+	
+	.tab_estimate {
+		border-collapse: collapse;
+		width: 1240px;
+	}
+	
+	.tab_estimate thead tr,
+	.tab_estimate tbody tr {
+		border: 2px solid black;
+	}
+	
+	.tab_estimate th {
+		border: 1px solid black;
+		font-weight: 400;
+		padding: 10px;
+		background-color: dimgray;
+		color: white;
+	}
+	
+	.tab_estimate tbody td {
+		border: 1px solid black;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.tab_estimate tbody tr.active_row,
+	.tab_estimate tbody td.active_row {
+		border-bottom: none;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		text-align: right;
+	}

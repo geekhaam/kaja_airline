@@ -1,0 +1,102 @@
+--1.0.1 user table -> clients table
+--1.0.2 inquire/reservation table의 fk에 on delete cascade 추가(pk삭제시 같이 삭제되는 옵션)
+--1.0.3 inquire table 수정
+--1.1.0 reservation table 수정 및 noreservation table 추가
+--1.1.1 reservation table 및 noreservation table 재수정
+--1.2.0 FAQ table 추가
+--1.2.1 notice table fName컬럼 추가
+--1.3.0 airport table 추가 
+--1.3.1 reservation table과 schedule table, noreservation table의 
+	pDeparture와 pArrive varchar2(30)으로 변경
+-------------------------------------------------------
+create table FAQ(
+qId varchar2(20),
+qQuestion VARCHAR2(100),
+qAnswer VARCHAR2(1000),
+qKategorie VARCHAR2(50)
+);
+
+create table clients(
+    cId varchar2(20) constraint users_pk PRIMARY key,
+    cPw varchar2(20) not null,
+    cName varchar2(10) not null,
+    cTel varchar2(20) not null,
+    cEmail varchar2(30) not null,
+    cNation varchar2(20) not null,
+    cResiAddr varchar2(80) not null
+);
+select * from clients;
+drop table clients;
+
+create table notice(
+    nNo number(10) constraint notice_pk primary key,
+    nTitle varchar2(40) not null,
+    nDate date not null,
+    nContent varchar2(2000) not null,
+    nFile varchar2(200),
+    nFname varchar2(200)
+);
+CREATE SEQUENCE notice_se start with 1 INCREMENT by 1  nocache;
+select * from notice;
+drop table notice;
+
+create table inquire(
+    iNo number(10) constraint inquire_pk primary key,
+    iId varchar2(20),
+    iName varchar2(20) not null,
+    iTitle varchar2(40) not null,
+    iDate date default sysdate,
+    iContent varchar2(500) not null,
+    iFile varchar2(80),
+    constraint inquire_fk foreign key (iId) references clients(cId) on delete CASCADE
+);
+CREATE SEQUENCE inquire_seq nocache;
+select * from inquire;
+drop table inquire;
+
+create table schedule(
+    pId number(10) constraint schedule_pk primary key,
+    pDTime date not null,
+    pATime date not null,
+    pDeparture varchar2(30) not null,
+    pArrive varchar2(30) not null,
+    pAdultPrice number(10) not null,
+    pChildPrice number(10) not null,
+    pBabyPrice number(10) not null
+);
+select * from schedule;
+drop table schedule;
+
+create table reservation(
+    rNo number(10),
+    rPId number(10),
+    rId varchar2(20),
+    rDTime date not null,
+    rDeparture varchar2(30) not null,
+    rATime date not null,
+    rArrive varchar2(30) not null,
+    rSeat varchar2(30) not null,
+    CONSTRAINT reservation_fk FOREIGN KEY (rId) REFERENCES clients(cId) on delete cascade
+);
+create sequence reservation_rNo
+start with 1
+increment by 1 nocache;
+
+select * from reservation;
+drop table reservation;
+
+create table noReservation(
+    nNo number(10),
+    nPId number(10),
+    nId varchar2(20),
+    nDTime date not null,
+    nDeparture varchar2(30) not null,
+    nATime date not null,
+    nArrive varchar2(30) not null,
+    nSeat varchar2(30) not null,
+    CONSTRAINT noReservation_fk FOREIGN KEY (nId) REFERENCES clients(cId) on delete cascade
+);
+create sequence noReservation_nNo
+start with 1
+increment by 1 nocache;
+------------------------------------------------------------
